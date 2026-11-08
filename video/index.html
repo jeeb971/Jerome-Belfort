@@ -1,0 +1,400 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Bravos Habitat – Jérôme Belfort</title>
+<style>
+@font-face{font-family:ID;font-weight:500;src:url(assets/fonts/InterDisplay-Medium.otf)}
+@font-face{font-family:ID;font-weight:600;src:url(assets/fonts/InterDisplay-SemiBold.otf)}
+@font-face{font-family:ID;font-weight:700;src:url(assets/fonts/InterDisplay-Bold.otf)}
+@font-face{font-family:ID;font-weight:800;src:url(assets/fonts/InterDisplay-ExtraBold.otf)}
+@font-face{font-family:ID;font-weight:900;src:url(assets/fonts/InterDisplay-Black.otf)}
+:root{--navy:#0B2545;--navy2:#13315C;--orange:#E8792B;--orange2:#F39A4A;--cream:#F6EFE5;--wa:#25D366}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1920px;overflow:hidden;background:var(--navy);font-family:ID,sans-serif;color:#fff}
+#stage{position:relative;width:1080px;height:1920px;overflow:hidden;background:var(--navy)}
+.scene{position:absolute;inset:0;overflow:hidden;display:none}
+.abs{position:absolute}
+.cover{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;will-change:transform}
+.mask{overflow:hidden;display:block}
+.mask>span{display:inline-block;will-change:transform}
+.center{left:0;right:0;text-align:center}
+.grid{position:absolute;inset:-200px;background-image:
+  linear-gradient(rgba(255,255,255,.06) 2px,transparent 2px),
+  linear-gradient(90deg,rgba(255,255,255,.06) 2px,transparent 2px),
+  linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px),
+  linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px);
+  background-size:180px 180px,180px 180px,36px 36px,36px 36px}
+.grid.dark{background-image:
+  linear-gradient(rgba(11,37,69,.10) 2px,transparent 2px),
+  linear-gradient(90deg,rgba(11,37,69,.10) 2px,transparent 2px),
+  linear-gradient(rgba(11,37,69,.05) 1px,transparent 1px),
+  linear-gradient(90deg,rgba(11,37,69,.05) 1px,transparent 1px);
+  background-size:180px 180px,180px 180px,36px 36px,36px 36px}
+.tag{display:inline-flex;align-items:center;gap:14px;padding:14px 26px;border-radius:999px;font-weight:700;font-size:30px;letter-spacing:.12em;text-transform:uppercase;background:rgba(11,37,69,.72);border:2px solid rgba(255,255,255,.35)}
+.tag i{width:14px;height:14px;border-radius:50%;background:var(--orange);display:block}
+.brand{display:flex;align-items:center;gap:22px}
+.brand svg{width:86px;height:86px}
+.brand b{font-weight:900;font-size:50px;letter-spacing:.04em;line-height:1}
+.brand small{display:block;font-weight:600;font-size:26px;letter-spacing:.32em;color:var(--orange2);margin-top:8px}
+.shadow{text-shadow:0 6px 30px rgba(0,0,0,.45)}
+/* wipe */
+.wipe{position:absolute;top:0;width:1900px;height:1920px;transform-origin:center;z-index:50}
+</style>
+</head>
+<body>
+<div id="stage">
+
+<!-- ============ S1 HOOK ============ -->
+<section class="scene" id="s1">
+  <img class="cover" id="s1img" src="assets/img00.jpg">
+  <div class="abs" style="inset:0;background:linear-gradient(180deg,rgba(11,37,69,.55) 0%,rgba(11,37,69,.15) 35%,rgba(11,37,69,.35) 55%,rgba(11,37,69,.92) 100%)"></div>
+  <div class="abs center" style="top:560px">
+    <div class="mask"><span id="s1a" style="font-weight:900;font-size:140px;line-height:1.02" class="shadow">VOUS AVEZ</span></div>
+    <div class="mask"><span id="s1b" style="font-weight:900;font-size:128px;line-height:1.02;color:var(--orange)" class="shadow">UN TERRAIN&nbsp;?</span></div>
+  </div>
+  <div class="abs center" style="top:960px">
+    <div class="mask"><span id="s1c" style="font-weight:600;font-size:64px;line-height:1.2" class="shadow">… et le projet d'une</span></div>
+    <div class="mask"><span id="s1d" style="font-weight:800;font-size:84px;line-height:1.2" class="shadow">maison à votre image&nbsp;?</span></div>
+  </div>
+  <div class="abs center" style="top:1380px"><span class="tag" id="s1tag"><i></i>Guadeloupe</span></div>
+</section>
+
+<!-- ============ S2 INTRO ============ -->
+<section class="scene" id="s2">
+  <div class="grid" id="s2grid"></div>
+  <div class="abs" style="inset:0;background:radial-gradient(circle at 50% 36%,rgba(232,121,43,.28),transparent 55%)"></div>
+  <div class="abs" id="s2port" style="left:250px;top:330px;width:580px;height:580px">
+    <svg class="abs" style="inset:-34px;width:648px;height:648px" viewBox="0 0 648 648">
+      <circle cx="324" cy="324" r="314" fill="none" stroke="rgba(255,255,255,.15)" stroke-width="4"/>
+      <circle id="s2ring" cx="324" cy="324" r="314" fill="none" stroke="#E8792B" stroke-width="10" stroke-linecap="round" stroke-dasharray="1973" stroke-dashoffset="1973" transform="rotate(-90 324 324)"/>
+    </svg>
+    <img src="assets/portrait.jpg" style="width:580px;height:580px;border-radius:50%;object-fit:cover;display:block">
+  </div>
+  <div class="abs center" style="top:985px">
+    <div class="mask"><span id="s2a" style="font-weight:600;font-size:70px;letter-spacing:.02em">Jérôme</span></div>
+    <div id="s2name" style="font-weight:900;font-size:160px;line-height:1;color:var(--orange);letter-spacing:.02em"></div>
+  </div>
+  <div class="abs center" style="top:1215px"><span id="s2role" style="display:inline-block;padding:20px 40px;border:3px solid #fff;border-radius:16px;font-weight:800;font-size:46px;letter-spacing:.14em">CONDUCTEUR DE TRAVAUX</span></div>
+  <div class="abs" id="s2brand" style="left:0;right:0;top:1400px;display:flex;justify-content:center">
+    <div class="brand"><svg viewBox="0 0 64 64"><use href="#logo"/></svg><div><b>BRAVOS HABITAT</b><small>GUADELOUPE</small></div></div>
+  </div>
+</section>
+
+<!-- ============ S3 A to Z ============ -->
+<section class="scene" id="s3" style="background:var(--cream);color:var(--navy)">
+  <div class="grid dark" id="s3grid"></div>
+  <div class="abs center" style="top:360px">
+    <div class="mask"><span id="s3a" style="font-weight:700;font-size:76px">Je vous accompagne</span></div>
+    <div class="mask"><span id="s3b" style="font-weight:900;font-size:260px;line-height:1;color:var(--orange);letter-spacing:-.02em">DE A À Z</span></div>
+  </div>
+  <!-- path line -->
+  <svg class="abs" style="left:0;top:820px;width:1080px;height:700px" viewBox="0 0 1080 700">
+    <path id="s3path" d="M190 120 C 190 360, 890 300, 890 560" fill="none" stroke="#0B2545" stroke-width="8" stroke-linecap="round"/>
+    <circle id="s3dot" r="22" fill="#E8792B"/>
+  </svg>
+  <div class="abs" id="s3p1" style="left:70px;top:820px;width:240px;text-align:center">
+    <div style="width:150px;height:150px;margin:0 auto;border-radius:36px;background:var(--navy);display:flex;align-items:center;justify-content:center">
+      <svg width="88" height="88" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linejoin="round"><path d="M3 21h18M3 21V9l9-6 9 6v12"/><path d="M7 21v-6h4v6M14 12h4v3h-4z" /></svg>
+    </div>
+  </div>
+  <div class="abs" id="s3t1" style="left:330px;top:840px;font-weight:800;font-size:58px;line-height:1.05">LA CONCEPTION<br><span style="font-weight:600;font-size:44px;color:#3d5878">des plans</span></div>
+  <div class="abs" id="s3p2" style="left:770px;top:1290px;width:240px;text-align:center">
+    <div style="width:150px;height:150px;margin:0 auto;border-radius:36px;background:var(--orange);display:flex;align-items:center;justify-content:center">
+      <svg width="88" height="88" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linejoin="round"><path d="M2 21h20M4 21V11h6v10M10 21V6l10 -3v18M13 9h4M13 13h4M13 17h4"/></svg>
+    </div>
+  </div>
+  <div class="abs" id="s3t2" style="right:330px;top:1310px;text-align:right;font-weight:800;font-size:58px;line-height:1.05">À LA<br>CONSTRUCTION</div>
+</section>
+
+<!-- ============ S4 STEPS ============ -->
+<section class="scene" id="s4">
+  <div id="steps"></div>
+  <div class="abs" id="dots" style="left:0;right:0;top:250px;display:flex;justify-content:center;gap:16px"></div>
+</section>
+
+<!-- ============ S5 BEFORE / AFTER ============ -->
+<section class="scene" id="s5">
+  <div class="grid" style="opacity:.6"></div>
+  <div class="abs center" style="top:250px">
+    <div class="mask"><span id="s5a" style="font-weight:800;font-size:76px">Du gros œuvre…</span></div>
+    <div class="mask"><span id="s5b" style="font-weight:900;font-size:96px;color:var(--orange)">à la maison rêvée</span></div>
+  </div>
+  <div class="abs" id="s5frame" style="left:50px;top:520px;width:980px;height:1060px;border-radius:40px;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.5)">
+    <img class="cover" id="s5after" src="assets/img06.jpg" style="object-position:50% 50%">
+    <div class="abs" id="s5topwrap" style="inset:0">
+      <img class="cover" id="s5before" src="assets/img10.jpg" style="object-position:48% 50%">
+    </div>
+    <div class="abs" id="s5bar" style="top:0;bottom:0;width:8px;margin-left:-4px;background:#fff;box-shadow:0 0 30px rgba(0,0,0,.5)">
+      <div style="position:absolute;top:50%;left:50%;width:110px;height:110px;margin:-55px 0 0 -55px;border-radius:50%;background:var(--orange);border:6px solid #fff;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:44px">‹ ›</div>
+    </div>
+    <span class="tag abs" id="s5l1" style="left:30px;top:30px"><i></i>Chantier</span>
+    <span class="tag abs" id="s5l2" style="right:30px;top:30px"><i style="background:#7fd1ff"></i>Projet 3D</span>
+  </div>
+</section>
+
+<!-- ============ S6 SERVICES ============ -->
+<section class="scene" id="s6">
+  <img class="cover" id="s6img" src="assets/img08.jpg" style="filter:blur(6px) brightness(.45)">
+  <div class="abs" style="inset:0;background:linear-gradient(180deg,rgba(11,37,69,.85),rgba(11,37,69,.6) 50%,rgba(11,37,69,.92))"></div>
+  <div class="abs" style="left:90px;right:90px;top:300px">
+    <div class="mask"><span id="s6a" style="font-weight:700;font-size:60px;color:var(--orange2)">Un seul interlocuteur</span></div>
+    <div class="mask"><span id="s6b" style="font-weight:900;font-size:104px;line-height:1.02">pour tout votre projet</span></div>
+  </div>
+  <div class="abs" id="s6list" style="left:90px;right:90px;top:660px"></div>
+</section>
+
+<!-- ============ S7 CTA ============ -->
+<section class="scene" id="s7">
+  <img class="cover" id="s7img" src="assets/img03.jpg" style="object-position:30% 50%">
+  <div class="abs" style="inset:0;background:linear-gradient(180deg,rgba(11,37,69,.92) 0%,rgba(11,37,69,.6) 40%,rgba(11,37,69,.75) 70%,rgba(11,37,69,.95) 100%)"></div>
+  <div class="abs" id="s7port" style="left:390px;top:240px;width:300px;height:300px;border-radius:50%;border:8px solid var(--orange);overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.5)">
+    <img src="assets/portrait.jpg" style="width:100%;height:100%;object-fit:cover">
+  </div>
+  <div class="abs center" style="top:580px">
+    <div class="mask"><span id="s7a" style="font-weight:700;font-size:64px" class="shadow">Parlons de votre</span></div>
+    <div class="mask"><span id="s7b" style="font-weight:900;font-size:150px;line-height:1.02;color:var(--orange)" class="shadow">PROJET</span></div>
+  </div>
+  <div class="abs" id="s7call" style="left:80px;right:80px;top:880px;padding:40px 30px;border-radius:36px;background:linear-gradient(135deg,var(--orange),#d4631a);box-shadow:0 25px 70px rgba(232,121,43,.45);text-align:center">
+    <div style="display:flex;align-items:center;justify-content:center;gap:26px">
+      <svg style="flex:none" width="78" height="78" viewBox="0 0 24 24" fill="#fff" stroke="#fff" stroke-width="1.2" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      <span id="s7num" style="font-weight:900;font-size:104px;letter-spacing:.01em;white-space:nowrap">0690 33 66 26</span>
+    </div>
+  </div>
+  <div class="abs" id="s7wa" style="left:150px;right:150px;top:1150px;padding:26px;border-radius:999px;background:var(--wa);display:flex;align-items:center;justify-content:center;gap:20px;font-weight:800;font-size:44px;box-shadow:0 18px 50px rgba(37,211,102,.35)">
+    <svg width="60" height="60" viewBox="0 0 32 32"><circle cx="16" cy="15" r="12.5" fill="none" stroke="#fff" stroke-width="2.6"/><path d="M5.5 27.5 7 21l5 4.5z" fill="#fff"/><g transform="translate(9.2 8.2) scale(.56)" fill="#fff"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></g></svg>
+    Écrivez-moi sur WhatsApp
+  </div>
+  <div class="abs center" id="s7mail" style="top:1300px;font-weight:600;font-size:42px;display:flex;justify-content:center;align-items:center;gap:16px">
+    <svg width="48" height="48" viewBox="0 0 24 24" fill="#F39A4A"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+    bravoshabitat@gmail.com
+  </div>
+  <div class="abs" id="s7brand" style="left:0;right:0;top:1410px;display:flex;justify-content:center">
+    <div class="brand"><svg viewBox="0 0 64 64"><use href="#logo"/></svg><div><b>BRAVOS HABITAT</b><small>JÉRÔME BELFORT · GUADELOUPE</small></div></div>
+  </div>
+</section>
+
+<!-- transition panels -->
+<div class="wipe" id="w2" style="background:var(--navy2)"></div>
+<div class="wipe" id="w1" style="background:var(--orange)"></div>
+
+<svg width="0" height="0" style="position:absolute">
+  <defs>
+    <g id="logo" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M5 31 L29 11 L45 24" stroke="#fff" stroke-width="4.5"/>
+      <path d="M11 27 V55 H41" stroke="#fff" stroke-width="4.5"/>
+      <rect x="20" y="33" width="10" height="10" stroke="#E8792B" stroke-width="3.5"/>
+      <path d="M49 55 C 49 44, 50 34, 53 24" stroke="#E8792B" stroke-width="4"/>
+      <path d="M53 24 C 47 19, 41 21, 38 26 M53 24 C 57 17, 62 17, 63 22 M53 24 C 52 16, 47 12, 43 13 M53 24 C 60 23, 62 29, 60 33" stroke="#E8792B" stroke-width="3.2"/>
+      <path d="M2 59 C 14 55, 26 63, 38 59 S 56 55, 62 59" stroke="#7fd1ff" stroke-width="3"/>
+    </g>
+  </defs>
+</svg>
+</div>
+
+<script>
+const $=id=>document.getElementById(id);
+const cl=x=>Math.max(0,Math.min(1,x));
+const lerp=(a,b,p)=>a+(b-a)*p;
+const E={
+  out:t=>1-Math.pow(1-t,3),
+  out5:t=>1-Math.pow(1-t,5),
+  inOut:t=>t<.5?4*t*t*t:1-Math.pow(-2*t+2,3)/2,
+  in:t=>t*t*t,
+  back:t=>{const c1=1.6,c3=c1+1;return 1+c3*Math.pow(t-1,3)+c1*Math.pow(t-1,2)},
+  lin:t=>t
+};
+const P=(t,a,d,e=E.out)=>e(cl((t-a)/d));
+// reveal in at a, out at b
+function rev(el,t,a,b,{d=.6,dout=.35,dy=110,unit='%'}={}){
+  const pi=P(t,a,d,E.out5), po=P(t,b,dout,E.in);
+  const y=lerp(dy,0,pi)+lerp(0,-dy,po);
+  el.style.transform=`translateY(${y}${unit})`;
+}
+function fade(el,t,a,b,{d=.5,dout=.3,dy=40,s0=1}={}){
+  const pi=P(t,a,d), po=P(t,b,dout,E.in);
+  el.style.opacity=pi*(1-po);
+  const s=lerp(s0,1,pi);
+  el.style.transform=`translateY(${lerp(dy,0,pi)-po*dy}px) scale(${s})`;
+}
+
+/* ---------- timeline ---------- */
+const T=[0,4.6,10.2,14.4,29.6,35.6,40.4,47.5]; // scene starts / end
+const DUR=T[T.length-1];
+const scenes=['s1','s2','s3','s4','s5','s6','s7'];
+
+/* build S2 name letters */
+'BELFORT'.split('').forEach(c=>{const m=document.createElement('span');m.className='mask';m.style.display='inline-block';const s=document.createElement('span');s.textContent=c;s.style.display='inline-block';m.appendChild(s);$('s2name').appendChild(m)});
+const nameL=[...$('s2name').querySelectorAll('.mask>span')];
+
+/* build S4 steps */
+const STEPS=[
+ {img:'img06.jpg',pos:'50% 50%',num:'01',t:'CONCEPTION',s:'Plans & perspectives 3D<br>de votre future maison',tag:'Perspective 3D'},
+ {img:'img05.jpg',pos:'45% 50%',num:'02',t:'PERMIS DE<br>CONSTRUIRE',s:'Implantation étudiée : soleil,<br>alizés, reculs, stationnement',tag:'Perspective 3D'},
+ {img:'img01.jpg',pos:'40% 50%',num:'03',t:'PLANS<br>D\'EXÉCUTION',s:'Fondations, réseaux, dalles :<br>tout est calé avant de couler',tag:'Chantier réel'},
+ {img:'img15.jpg',pos:'38% 50%',num:'04',t:'SUIVI DE<br>CHANTIER',s:'Coordination des artisans,<br>qualité & respect des délais',tag:'Chantier réel'},
+ {img:'img04.jpg',pos:'45% 50%',num:'05',t:'FINITIONS &<br>LIVRAISON',s:'Vous entrez chez vous,<br>l\'esprit tranquille',tag:'Perspective 3D'},
+];
+const SD=(T[4]-T[3])/STEPS.length;
+STEPS.forEach((st,i)=>{
+  const g=document.createElement('div');g.className='abs';g.style.inset='0';g.id='st'+i;
+  g.innerHTML=`<div class="abs" style="inset:0;overflow:hidden" id="stc${i}">
+    <img class="cover" id="sti${i}" src="assets/${st.img}" style="object-position:${st.pos}">
+    <div class="abs" style="inset:0;background:linear-gradient(180deg,rgba(11,37,69,.7) 0%,rgba(11,37,69,0) 28%,rgba(11,37,69,0) 45%,rgba(11,37,69,.88) 68%,rgba(11,37,69,.97) 100%)"></div>
+  </div>
+  <div class="abs" id="stn${i}" style="left:70px;top:330px;font-weight:900;font-size:300px;line-height:1;color:transparent;-webkit-text-stroke:5px rgba(255,255,255,.95)">${st.num}</div>
+  <span class="tag abs" id="stg${i}" style="right:60px;top:380px"><i style="${st.tag==='Chantier réel'?'':'background:#7fd1ff'}"></i>${st.tag}</span>
+  <div class="abs" style="left:70px;right:60px;top:1130px">
+    <div class="abs" id="stbar${i}" style="left:0;top:-36px;height:12px;width:160px;background:var(--orange);border-radius:6px;transform-origin:left"></div>
+    <div class="mask"><span id="stt${i}" style="font-weight:900;font-size:104px;line-height:1.0">${st.t}</span></div>
+    <div class="mask" style="margin-top:26px"><span id="sts${i}" style="font-weight:600;font-size:48px;line-height:1.25;color:#dfe8f3">${st.s}</span></div>
+  </div>`;
+  $('steps').appendChild(g);
+  const d=document.createElement('div');d.id='dot'+i;d.style.cssText='height:12px;width:12px;border-radius:6px;background:rgba(255,255,255,.45)';$('dots').appendChild(d);
+});
+
+/* build S6 list */
+const ITEMS=['Conception de votre maison','Plans d\'exécution','Permis de construire','État des lieux & devis','Suivi de chantier'];
+ITEMS.forEach((t,i)=>{
+  const r=document.createElement('div');r.id='li'+i;
+  r.style.cssText='display:flex;align-items:center;gap:30px;padding:30px 34px;margin-bottom:26px;border-radius:28px;background:rgba(255,255,255,.08);border:2px solid rgba(255,255,255,.14)';
+  r.innerHTML=`<div id="lc${i}" style="flex:none;width:84px;height:84px;border-radius:50%;background:var(--orange);display:flex;align-items:center;justify-content:center"><svg width="56" height="56" viewBox="0 0 24 24" fill="#fff"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></div><div style="font-weight:800;font-size:52px">${t}</div>`;
+  $('s6list').appendChild(r);
+});
+
+const s3path=$('s3path'), s3len=s3path.getTotalLength();
+
+function render(t){
+  // scene visibility
+  scenes.forEach((s,i)=>{$(s).style.display=(t>=T[i]&&t<T[i+1])?'block':'none'});
+
+  // wipes centered on scene boundaries
+  let wp=-1;
+  for(let i=1;i<T.length-1;i++){const p=(t-(T[i]-.42))/.84; if(p>=0&&p<=1.25){wp=p;break}}
+  const wx=p=>lerp(1400,-2200,E.inOut(cl(p)));
+  $('w1').style.transform=`translateX(${wp<0?3000:wx(wp)}px) skewX(-15deg)`;
+  $('w2').style.transform=`translateX(${wp<0?3000:wx(wp-.12)+0}px) skewX(-15deg)`;
+
+  /* S1 */
+  if(t<T[1]){
+    $('s1img').style.transform=`scale(${lerp(1.22,1.04,P(t,0,T[1],E.lin))}) translateY(${lerp(-20,20,t/T[1])}px)`;
+    rev($('s1a'),t,.15,9);
+    rev($('s1b'),t,.45,9);
+    rev($('s1c'),t,1.5,9);
+    rev($('s1d'),t,1.75,9);
+    fade($('s1tag'),t,2.4,9,{s0:.7});
+  }
+  /* S2 */
+  if(t>=T[1]&&t<T[2]){
+    const l=t-T[1];
+    $('s2grid').style.transform=`translate(${-l*18}px,${-l*30}px)`;
+    const pp=P(l,.2,.9,E.back);
+    $('s2port').style.transform=`scale(${lerp(.4,1,pp)}) translateY(${Math.sin(l*1.6)*6}px)`;
+    $('s2port').style.opacity=P(l,.2,.3);
+    $('s2ring').style.strokeDashoffset=1973*(1-P(l,.6,1.3,E.inOut));
+    rev($('s2a'),l,1.0,99);
+    nameL.forEach((s,i)=>rev(s,l,1.15+i*.06,99,{d:.5}));
+    fade($('s2role'),l,2.0,99,{s0:.8,dy:0});
+    fade($('s2brand'),l,2.6,99);
+  }
+  /* S3 */
+  if(t>=T[2]&&t<T[3]){
+    const l=t-T[2];
+    $('s3grid').style.transform=`translate(${l*14}px,${-l*10}px)`;
+    rev($('s3a'),l,.25,99);
+    const zb=P(l,.45,.7,E.back);
+    $('s3b').style.transform=`scale(${lerp(.3,1,zb)})`; $('s3b').style.opacity=P(l,.45,.2);
+    fade($('s3p1'),l,1.1,99,{s0:.5,dy:0});
+    fade($('s3t1'),l,1.25,99,{dy:0});
+    $('s3t1').style.transform=`translateX(${lerp(-60,0,P(l,1.25,.5))}px)`;
+    const pd=P(l,1.4,1.5,E.inOut);
+    const pt=s3path.getPointAtLength(s3len*pd);
+    $('s3dot').setAttribute('cx',pt.x);$('s3dot').setAttribute('cy',pt.y);
+    $('s3dot').style.opacity=P(l,1.35,.2);
+    s3path.style.strokeDasharray=`${s3len*pd} ${s3len}`;
+    fade($('s3p2'),l,2.7,99,{s0:.5,dy:0});
+    fade($('s3t2'),l,2.85,99,{dy:0});
+    $('s3t2').style.transform=`translateX(${lerp(60,0,P(l,2.85,.5))}px)`;
+  }
+  /* S4 */
+  if(t>=T[3]&&t<T[4]){
+    const l=t-T[3];
+    STEPS.forEach((st,i)=>{
+      const a=i*SD, b=a+SD, loc=l-a;
+      const g=$('st'+i);
+      const on = l>=a-.01 && l< b+ .7;
+      g.style.display=on?'block':'none';
+      g.style.zIndex=i+1;
+      if(!on) return;
+      // reveal: clip from right (except first)
+      const rp = i===0?1:P(loc,0,.65,E.inOut);
+      $('stc'+i).style.clipPath=`inset(0 0 0 ${(1-rp)*100}%)`;
+      $('sti'+i).style.transform=`scale(${lerp(1.25,1.06,P(loc,0,SD+.7,E.lin))}) translateX(${lerp(40,-40,P(loc,0,SD+.7,E.lin))}px)`;
+      // texts (hide when next one arrives)
+      const out=b-.05;
+      const n=$('stn'+i);
+      const np=P(loc,.25,.6,E.out5), no=P(loc,SD-.05,.25,E.in);
+      n.style.opacity=np*(1-no); n.style.transform=`translateX(${lerp(-120,0,np)}px)`;
+      fade($('stg'+i),loc,.45,SD-.05,{s0:.8,dy:0});
+      $('stbar'+i).style.transform=`scaleX(${P(loc,.35,.6)*(1-P(loc,SD-.05,.2))})`;
+      rev($('stt'+i),loc,.4,SD-.05);
+      rev($('sts'+i),loc,.6,SD-.05);
+      // hide previous texts when overlapped
+      if(loc>SD+.2){ ['stn','stg','stt','sts'].forEach(k=>$(k+i).style.opacity=0); }
+    });
+    const cur=Math.min(STEPS.length-1,Math.floor(l/SD));
+    STEPS.forEach((_,i)=>{const d=$('dot'+i);d.style.width=(i===cur?60:12)+'px';d.style.background=i<=cur?'#E8792B':'rgba(255,255,255,.45)'});
+    $('dots').style.opacity=P(l,.3,.4);
+    $('dots').style.zIndex=20;
+  }
+  /* S5 */
+  if(t>=T[4]&&t<T[5]){
+    const l=t-T[4];
+    rev($('s5a'),l,.2,99); rev($('s5b'),l,.45,99);
+    const fp=P(l,.3,.8,E.out5);
+    $('s5frame').style.transform=`translateY(${lerp(200,0,fp)}px) scale(${lerp(.9,1,fp)})`; $('s5frame').style.opacity=fp;
+    let x=92;
+    x=lerp(92,10,P(l,1.4,1.7,E.inOut));
+    x=lerp(x,50,P(l,3.6,1.0,E.inOut));
+    $('s5topwrap').style.clipPath=`inset(0 ${100-x}% 0 0)`;
+    $('s5bar').style.left=x+'%';
+    $('s5before').style.transform=`scale(${lerp(1.12,1.0,P(l,0,6,E.lin))})`;
+    $('s5after').style.transform=`scale(${lerp(1.0,1.1,P(l,0,6,E.lin))})`;
+    fade($('s5l1'),l,.9,99,{dy:0,s0:.7}); fade($('s5l2'),l,1.1,99,{dy:0,s0:.7});
+  }
+  /* S6 */
+  if(t>=T[5]&&t<T[6]){
+    const l=t-T[5];
+    $('s6img').style.transform=`scale(${lerp(1.15,1.05,l/5)})`;
+    rev($('s6a'),l,.2,99); rev($('s6b'),l,.4,99);
+    ITEMS.forEach((_,i)=>{
+      const a=.9+i*.42, p=P(l,a,.55,E.out5);
+      const r=$('li'+i); r.style.opacity=p; r.style.transform=`translateX(${lerp(-220,0,p)}px)`;
+      const c=P(l,a+.2,.5,E.back); $('lc'+i).style.transform=`scale(${c}) rotate(${lerp(-90,0,c)}deg)`;
+    });
+  }
+  /* S7 */
+  if(t>=T[6]){
+    const l=t-T[6];
+    $('s7img').style.transform=`scale(${lerp(1.2,1.05,P(l,0,7,E.lin))})`;
+    const pp=P(l,.15,.8,E.back);
+    $('s7port').style.transform=`scale(${pp})`;
+    rev($('s7a'),l,.4,99); rev($('s7b'),l,.6,99);
+    const cp=P(l,1.0,.7,E.back);
+    const pulse=l>2.2?1+.035*Math.max(0,Math.sin((l-2.2)*Math.PI*1.6)):1;
+    $('s7call').style.transform=`scale(${lerp(.6,1,cp)*pulse})`; $('s7call').style.opacity=P(l,1.0,.3);
+    fade($('s7wa'),l,1.6,99,{dy:60});
+    fade($('s7mail'),l,2.0,99,{dy:40});
+    fade($('s7brand'),l,2.4,99,{dy:40});
+    // final fade out
+    $('stage').style.filter=`brightness(${1-P(t,DUR-.5,.5,E.lin)*0})`;
+  }
+}
+window.DUR=DUR; window.render=render; window.SCENES=T;
+const q=new URLSearchParams(location.search);
+if(q.has('t')) render(parseFloat(q.get('t')));
+else if(q.has('play')){const s=performance.now();(function f(){render(((performance.now()-s)/1000)%DUR);requestAnimationFrame(f)})()}
+else render(0);
+</script>
+</body>
+</html>
