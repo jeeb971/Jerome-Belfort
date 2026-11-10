@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Estimation – Maison modulaire 60 m² – Bravos Habitat</title>
+<style>
+@font-face{font-family:ID;font-weight:500;src:url(../video/assets/fonts/InterDisplay-Medium.otf)}
+@font-face{font-family:ID;font-weight:600;src:url(../video/assets/fonts/InterDisplay-SemiBold.otf)}
+@font-face{font-family:ID;font-weight:700;src:url(../video/assets/fonts/InterDisplay-Bold.otf)}
+@font-face{font-family:ID;font-weight:800;src:url(../video/assets/fonts/InterDisplay-ExtraBold.otf)}
+@font-face{font-family:ID;font-weight:900;src:url(../video/assets/fonts/InterDisplay-Black.otf)}
+:root{--navy:#0B2545;--navy2:#13315C;--orange:#E8792B;--cream:#F6EFE5;--line:#D9DEE6;--mut:#5B6B80;--ok:#1F9D55;--warn:#C2410C}
+@page{size:A4;margin:0}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:ID,sans-serif;color:var(--navy);background:#fff;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.page{width:210mm;height:296.5mm;position:relative;overflow:hidden;page-break-after:always;padding:0 14mm}
+.page:last-of-type{page-break-after:auto}
+header{margin:0 -14mm;padding:9mm 14mm 7mm;background:var(--navy);color:#fff;display:flex;justify-content:space-between;align-items:center}
+.brand{display:flex;align-items:center;gap:10px}
+.brand svg{width:46px;height:46px}
+.brand b{font-weight:900;font-size:21px;letter-spacing:.04em;display:block}
+.brand small{font-weight:600;font-size:9.5px;letter-spacing:.28em;color:#F39A4A}
+.hmeta{text-align:right;font-size:10px;line-height:1.55;color:#cfd8e6}
+.hmeta b{color:#fff;font-size:12px}
+h1{font-weight:900;font-size:27px;line-height:1.08;margin-top:7mm}
+h1 span{color:var(--orange)}
+.sub{font-size:11.5px;color:var(--mut);margin-top:2mm;line-height:1.45}
+.row{display:flex;gap:6mm}
+.card{border:1px solid var(--line);border-radius:10px;padding:4mm 5mm}
+h2{font-weight:800;font-size:13px;letter-spacing:.08em;text-transform:uppercase;margin:6mm 0 2.5mm;display:flex;align-items:center;gap:8px}
+h2::before{content:"";width:16px;height:4px;border-radius:2px;background:var(--orange)}
+table{width:100%;border-collapse:collapse;font-size:10.3px}
+th{background:var(--navy);color:#fff;font-weight:700;text-align:left;padding:6px 7px;font-size:9.5px;letter-spacing:.06em;text-transform:uppercase}
+th.n,td.n{text-align:right;white-space:nowrap}
+td{padding:6px 7px;border-bottom:1px solid var(--line);vertical-align:top;line-height:1.35}
+td .d{color:var(--mut);font-size:9.3px;margin-top:1.5px}
+td .num{display:inline-block;min-width:18px;height:18px;border-radius:5px;background:var(--cream);color:var(--orange);font-weight:900;text-align:center;line-height:18px;font-size:10px;margin-right:6px}
+tr.sub td{background:#F3F5F8;font-weight:800}
+tr.opt td{background:#FFF6EE}
+tr.tot td{background:var(--navy);color:#fff;font-weight:900;font-size:12px;border:none}
+tr.tot2 td{background:var(--orange);color:#fff;font-weight:900;font-size:13px;border:none}
+.kpis{display:flex;gap:4mm;margin-top:5mm}
+.kpi{flex:1;border-radius:10px;padding:3.5mm 4mm;background:var(--cream)}
+.kpi .l{font-size:9px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--mut)}
+.kpi .v{font-size:19px;font-weight:900;margin-top:1mm}
+.kpi.o{background:var(--navy);color:#fff}.kpi.o .l{color:#F39A4A}
+.verdict{margin-top:4mm;border-radius:10px;padding:4mm 5mm;font-size:11px;line-height:1.5;border-left:5px solid var(--warn);background:#FFF4EC}
+.verdict b{color:var(--warn)}
+ul{list-style:none;font-size:10.3px;line-height:1.5}
+ul li{padding-left:16px;position:relative;margin-bottom:1.2mm}
+ul.no li::before{content:"✕";position:absolute;left:0;color:#B91C1C;font-weight:900}
+ul.yes li::before{content:"✓";position:absolute;left:0;color:var(--ok);font-weight:900}
+ul.tip li::before{content:"→";position:absolute;left:0;color:var(--orange);font-weight:900}
+footer{position:absolute;left:0;right:0;bottom:0;padding:5mm 14mm;background:var(--navy);color:#fff;display:flex;justify-content:space-between;align-items:center;font-size:10.5px}
+footer b{font-size:15px;font-weight:900}
+footer .wa{background:#25D366;padding:5px 12px;border-radius:999px;font-weight:800}
+.small{font-size:8.6px;color:var(--mut);line-height:1.45}
+.plan text{font-family:ID,sans-serif}
+</style>
+</head>
+<body>
+
+<!-- ======================= PAGE 1 ======================= -->
+<section class="page">
+  <header>
+    <div class="brand"><svg viewBox="0 0 64 64"><use href="#logo"/></svg><div><b>BRAVOS HABITAT</b><small>CONCEPTION · CONSTRUCTION · GUADELOUPE</small></div></div>
+    <div class="hmeta"><b>ESTIMATION BUDGÉTAIRE</b><br>Réf. <span id="ref"></span><br>Date : <span id="date"></span><br>Validité : 1 mois</div>
+  </header>
+
+  <h1>Maison modulaire <span>≈ 60 m²</span><br>Qu'est-ce qu'on a pour 60 000 € ?</h1>
+  <p class="sub">4 modules de 2,49 × 6 m assemblés, menuiseries aluminium, toiture, transport et pose — avec en option la dalle béton, pour voir si tout rentre dans le budget. Prix estimés aux conditions de la Guadeloupe (TVA DOM 8,5 %).</p>
+
+  <div class="row" style="margin-top:5mm;align-items:stretch">
+    <div class="card" style="flex:1.25">
+      <svg class="plan" viewBox="0 0 420 300" width="100%" style="max-height:62mm">
+        <!-- roof outline -->
+        <rect x="18" y="20" width="384" height="252" rx="4" fill="none" stroke="#E8792B" stroke-width="2" stroke-dasharray="6 5"/>
+        <text x="398" y="15" font-size="10" fill="#E8792B" text-anchor="end" font-weight="700">emprise toiture (débords ≈ 0,8 m)</text>
+        <!-- modules: 4 x 2.49 wide (scale 36px/m) -> 89.6px ; depth 6m -> 216px -->
+        <g transform="translate(30,40)" font-size="11" fill="#0B2545">
+          <rect x="0" y="0" width="89.6" height="216" fill="#EAF0F7" stroke="#0B2545" stroke-width="2.5"/>
+          <rect x="89.6" y="0" width="89.6" height="216" fill="#EAF0F7" stroke="#0B2545" stroke-width="2.5"/>
+          <rect x="179.2" y="0" width="89.6" height="216" fill="#F6EFE5" stroke="#0B2545" stroke-width="2.5"/>
+          <rect x="268.8" y="0" width="89.6" height="216" fill="#F6EFE5" stroke="#0B2545" stroke-width="2.5"/>
+          <line x1="89.6" y1="30" x2="89.6" y2="186" stroke="#EAF0F7" stroke-width="4"/>
+          <line x1="268.8" y1="140" x2="358.4" y2="140" stroke="#0B2545" stroke-width="2"/>
+          <text x="89.6" y="100" text-anchor="middle" font-weight="800" font-size="13">SÉJOUR · CUISINE</text>
+          <text x="89.6" y="117" text-anchor="middle" fill="#5B6B80">≈ 29,9 m² (modules 1 + 2)</text>
+          <text x="224" y="100" text-anchor="middle" font-weight="800" font-size="13">CHAMBRE 1</text>
+          <text x="224" y="117" text-anchor="middle" fill="#5B6B80">≈ 14,9 m²</text>
+          <text x="313.6" y="70" text-anchor="middle" font-weight="800" font-size="13">CHAMBRE 2</text>
+          <text x="313.6" y="87" text-anchor="middle" fill="#5B6B80">≈ 10 m²</text>
+          <text x="313.6" y="176" text-anchor="middle" font-weight="800" font-size="11">SDE · WC</text>
+          <text x="313.6" y="191" text-anchor="middle" fill="#5B6B80">≈ 4,9 m²</text>
+          <!-- openings -->
+          <rect x="40" y="211" width="100" height="10" fill="#7fd1ff" stroke="#0B2545"/><text x="90" y="236" text-anchor="middle" font-size="9.5" fill="#5B6B80">baie coulissante alu</text>
+          <rect x="200" y="211" width="45" height="10" fill="#7fd1ff" stroke="#0B2545"/>
+          <rect x="290" y="-5" width="45" height="10" fill="#7fd1ff" stroke="#0B2545"/>
+          <rect x="20" y="-5" width="45" height="10" fill="#7fd1ff" stroke="#0B2545"/>
+          <rect x="353" y="160" width="10" height="28" fill="#7fd1ff" stroke="#0B2545"/>
+          <rect x="-5" y="80" width="10" height="40" fill="#E8792B" stroke="#0B2545"/><text x="12" y="140" font-size="9.5" fill="#5B6B80">entrée</text>
+          <!-- dims -->
+          <text x="179.2" y="252" text-anchor="middle" font-weight="700" font-size="11">4 × 2,49 m = 9,96 m</text>
+          <text x="372" y="112" font-weight="700" font-size="11" transform="rotate(90 372 112)" text-anchor="middle">6,00 m</text>
+        </g>
+      </svg>
+      <p class="small" style="margin-top:1mm">Plan de principe indicatif — distribution adaptable (2 ou 3 chambres, cuisine ouverte, terrasse…).</p>
+    </div>
+    <div style="flex:1;display:flex;flex-direction:column;gap:3mm">
+      <div class="kpi"><div class="l">Surface des modules</div><div class="v">59,8 m²</div></div>
+      <div class="kpi"><div class="l">Pack sans dalle (TTC)</div><div class="v" id="k1"></div></div>
+      <div class="kpi"><div class="l">Pack + dalle béton (TTC)</div><div class="v" id="k2"></div></div>
+      <div class="kpi o"><div class="l">Budget client</div><div class="v">60 000 €</div></div>
+    </div>
+  </div>
+
+  <h2>Détail de l'estimation</h2>
+  <table id="tbl">
+    <thead><tr><th style="width:58%">Désignation</th><th class="n">Qté</th><th class="n">P.U. HT</th><th class="n">Total HT</th></tr></thead>
+    <tbody></tbody>
+  </table>
+</section>
+
+<!-- ======================= PAGE 2 ======================= -->
+<section class="page">
+  <header>
+    <div class="brand"><svg viewBox="0 0 64 64"><use href="#logo"/></svg><div><b>BRAVOS HABITAT</b><small>CONCEPTION · CONSTRUCTION · GUADELOUPE</small></div></div>
+    <div class="hmeta"><b>ESTIMATION BUDGÉTAIRE</b><br>Réf. <span class="ref2"></span><br>Page 2/2</div>
+  </header>
+
+  <h2 style="margin-top:7mm">Récapitulatif</h2>
+  <table id="recap"><tbody></tbody></table>
+
+  <div class="verdict" id="verdict"></div>
+
+  <div class="row" style="margin-top:2mm">
+    <div style="flex:1">
+      <h2>Compris dans le pack</h2>
+      <ul class="yes">
+        <li>4 modules 2,49 × 6 m isolés, assemblés et étanchés entre eux</li>
+        <li>Pré-câblage électrique et attentes plomberie dans les modules</li>
+        <li>Menuiseries aluminium : porte, baie, fenêtres, jalousies</li>
+        <li>Toiture tôle sur charpente, avec débords contre le soleil et la pluie</li>
+        <li>Fret maritime, dédouanement, octroi de mer, livraison par camion-grue</li>
+        <li>Suivi du chantier par votre conducteur de travaux</li>
+      </ul>
+    </div>
+    <div style="flex:1">
+      <h2>Non compris (à prévoir)</h2>
+      <ul class="no">
+        <li>Plans, permis de construire, étude de sol (G2), bureau d'études</li>
+        <li>Terrassement important, accès difficile ou terrain en pente</li>
+        <li>Assainissement : fosse toutes eaux + épandage (≈ 6 000 à 9 000 €)</li>
+        <li>Raccordements EDF, eau, télécom (selon distance)</li>
+        <li>Appareils sanitaires, cuisine équipée, carrelage, peinture</li>
+        <li>Terrasse, clôture, portail, aménagements extérieurs</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Comment tenir les 60 000 €</h2>
+  <ul class="tip">
+    <li><b>Fondations sur plots et longrines</b> au lieu d'une dalle pleine : environ 3 500 € d'économie (selon le sol).</li>
+    <li><b>Des fenêtres simples à la place de certaines jalousies</b>, et une seule baie coulissante.</li>
+    <li><b>Toiture simple à 2 pans</b>, avec des débords réduits côté vent.</li>
+    <li><b>Vous préparez vous-même</b> le terrain (débroussaillage, accès camion) avant la livraison.</li>
+  </ul>
+
+  <h2>Hypothèses de l'estimation</h2>
+  <p class="small" style="font-size:9.4px">Prix estimés en novembre 2026 pour un terrain plat, accessible à un camion-grue, situé à moins de 40 km du port de Jarry. Modules importés (structure acier galvanisé, panneaux sandwich isolés) : le fret et l'octroi de mer peuvent varier selon l'origine, le code douanier et la période. La TVA est appliquée au taux de 8,5 % en vigueur en Guadeloupe. Les modules, la toiture et les fixations doivent respecter les règles para-sismiques (zone 5) et para-cycloniques : à confirmer par le bureau d'études. <b>Ce document est une estimation indicative et non un devis contractuel.</b> Le prix définitif sera établi après la visite du terrain et le choix des équipements.</p>
+
+  <footer>
+    <div><b>Jérôme Belfort</b> — Conducteur de travaux<br>bravoshabitat@gmail.com · Guadeloupe</div>
+    <div style="text-align:right"><b>0690 33 66 26</b><br><span class="wa">WhatsApp</span></div>
+  </footer>
+</section>
+
+<svg width="0" height="0" style="position:absolute"><defs>
+  <g id="logo" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M5 31 L29 11 L45 24" stroke="#fff" stroke-width="4.5"/>
+    <path d="M11 27 V55 H41" stroke="#fff" stroke-width="4.5"/>
+    <rect x="20" y="33" width="10" height="10" stroke="#E8792B" stroke-width="3.5"/>
+    <path d="M49 55 C 49 44, 50 34, 53 24" stroke="#E8792B" stroke-width="4"/>
+    <path d="M53 24 C 47 19, 41 21, 38 26 M53 24 C 57 17, 62 17, 63 22 M53 24 C 52 16, 47 12, 43 13 M53 24 C 60 23, 62 29, 60 33" stroke="#E8792B" stroke-width="3.2"/>
+    <path d="M2 59 C 14 55, 26 63, 38 59 S 56 55, 62 59" stroke="#7fd1ff" stroke-width="3"/>
+  </g>
+</defs></svg>
+
+<script src="prix.js"></script>
+<script>
+const f=n=>n.toLocaleString('fr-FR',{minimumFractionDigits:0,maximumFractionDigits:0}).replace(/ /g,' ')+' €';
+document.getElementById('ref').textContent=DEVIS.ref;
+document.querySelector('.ref2').textContent=DEVIS.ref;
+document.getElementById('date').textContent=DEVIS.date;
+const tb=document.querySelector('#tbl tbody');
+let i=0, htPack=0;
+function line(it,opt){
+  const tot=it.qte*it.pu; i++;
+  const tr=document.createElement('tr'); if(opt) tr.className='opt';
+  tr.innerHTML=`<td><span class="num">${i}</span><b>${it.titre}</b><div class="d">${it.detail}</div></td><td class="n">${it.qte} ${it.unite}</td><td class="n">${f(it.pu)}</td><td class="n"><b>${f(tot)}</b></td>`;
+  tb.appendChild(tr); return tot;
+}
+DEVIS.pack.forEach(it=>htPack+=line(it));
+const sub=document.createElement('tr');sub.className='sub';sub.innerHTML=`<td colspan="3">Sous-total pack (hors dalle)</td><td class="n">${f(htPack)}</td>`;tb.appendChild(sub);
+let htDalle=0; DEVIS.dalle.forEach(it=>htDalle+=line(it,true));
+const T=DEVIS.tva;
+const ttcPack=htPack*(1+T), ttcAll=(htPack+htDalle)*(1+T), ttcDalle=htDalle*(1+T);
+document.getElementById('k1').textContent=f(ttcPack);
+document.getElementById('k2').textContent=f(ttcAll);
+const rc=document.querySelector('#recap tbody');
+rc.innerHTML=`
+<tr><td>Pack 4 modules + menuiseries alu + toiture + transport — HT</td><td class="n">${f(htPack)}</td></tr>
+<tr><td>TVA ${(T*100).toLocaleString('fr-FR')} % (Guadeloupe)</td><td class="n">${f(htPack*T)}</td></tr>
+<tr class="tot"><td>PACK SANS DALLE — TTC</td><td class="n">${f(ttcPack)}</td></tr>
+<tr><td style="padding-top:10px">Dalle béton + préparation — TTC</td><td class="n" style="padding-top:10px">${f(ttcDalle)}</td></tr>
+<tr class="tot2"><td>PACK + DALLE BÉTON — TTC</td><td class="n">${f(ttcAll)}</td></tr>`;
+const ecart=ttcAll-60000;
+document.getElementById('verdict').innerHTML = ecart>0
+ ? `<b>Verdict :</b> avec 60 000 €, on a le <b>pack complet hors dalle</b> (${f(ttcPack)} TTC). En ajoutant la dalle béton, on arrive à <b>${f(ttcAll)} TTC, soit environ ${f(Math.round(ecart/100)*100)} de plus que le budget</b>. Les pistes d'économie ci-dessous réduisent l'écart d'environ 4 000 à 6 000 €, sans tout absorber : avec la dalle, il faut plutôt prévoir <b>65 000 à 70 000 € TTC</b>.`
+ : `<b style="color:var(--ok)">Verdict :</b> le pack complet avec la dalle béton tient dans le budget : <b>${f(ttcAll)} TTC</b>, soit ${f(-ecart)} de marge.`;
+window.TOTAUX={htPack,htDalle,ttcPack,ttcDalle,ttcAll};
+</script>
+</body>
+</html>
